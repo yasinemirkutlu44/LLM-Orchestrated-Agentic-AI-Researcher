@@ -43,20 +43,25 @@ flowchart TD
     A[👤 User Query] --> B[🛡️ Query Validator]
     B -->|valid| C[🗺️ Search Planner]
     B -->|invalid| X[❌ Rejected with reason]
-    C --> D[🌐 Research Assistants<br/>parallel via asyncio.gather]
-    D --> E[✍️ Senior Writer<br/>synthesises findings]
+    C --> D1[🌐 Research Agent 1]
+    C --> D2[🌐 Research Agent 2]
+    C --> D3[🌐 Research Agent N]
+    D1 --> E[✍️ Senior Writer<br/>synthesises findings]
+    D2 --> E
+    D3 --> E
     E --> F[📄 PDF Saver<br/>exports downloadable PDF]
     F --> G[✅ Report delivered to user]
 
     style A fill:#4a9eff,color:#fff
     style B fill:#ff6b6b,color:#fff
     style C fill:#ffa500,color:#fff
-    style D fill:#22c55e,color:#fff
+    style D1 fill:#22c55e,color:#fff
+    style D2 fill:#22c55e,color:#fff
+    style D3 fill:#22c55e,color:#fff
     style E fill:#a855f7,color:#fff
     style F fill:#3b82f6,color:#fff
     style G fill:#10b981,color:#fff
 ```
-
 Parallel search execution via `asyncio.gather` keeps latency low. Pydantic schemas at each agent boundary guarantee the next agent receives well-formed, validated data.
 
 ---
