@@ -42,9 +42,9 @@ flowchart TD
     B -->|valid| C[🗺️ Search Planner]
     
     subgraph parallel [Parallel via asyncio.gather]
-        D1[🌐 Research Agent 1]
-        D2[🌐 Research Agent 2]
-        D3[🌐 Research Agent N]
+        D1[🌐 Research Assistant Query Aspect 1]
+        D2[🌐 Research Assistant Query Aspect 2]
+        D3[🌐 Research Assistant Query Aspect N]
     end
     
     C --> D1
