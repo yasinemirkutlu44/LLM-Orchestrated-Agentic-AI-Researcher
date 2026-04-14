@@ -4,6 +4,12 @@ An autonomous researcher that turns any research query into a structured, downlo
 
 🚀 **Live demo:** [Hugging Face Space](https://huggingface.co/spaces/yasinemirkutlu44/LLM-Orchestrated_Agentic_AI_Researcher)
 
+> **TL;DR:** Type a research question → get a cited, multi-section PDF report in under a minute.
+
+---
+🧠 **Built with OpenAI frontier models and the OpenAI Agents SDK** 🚀
+---
+
 ---
 
 ## ✨ What It Does
@@ -11,12 +17,35 @@ An autonomous researcher that turns any research query into a structured, downlo
 Enter a research topic and the system will:
 
 1. **Validate** your query to ensure it's meaningful and actionable.
-2. **Plan** Plan a set of complementary web searches covering different aspects of the research query. For example, for "recent advancements in Large Language Models", the planner might produce one search on multimodal capabilities and another on agentic reasoning benchmarks.
-3. **Search** the web in parallel across those angles.
+2. **Plan** a set of complementary web searches covering different aspects of the research query. For example, for *"recent advancements in Large Language Models"*, the planner might produce one search on multimodal capabilities and another on agentic reasoning benchmarks.
+3. **Search** the web in parallel across each of those aspects.
 4. **Synthesise** the findings into a structured markdown report.
 5. **Export** the report as a downloadable PDF.
 
 All progress is streamed to the UI in real time, with a progress bar tracking each stage.
+
+---
+
+## 🖼️ Screenshots
+
+### Home screen
+![Home screen](Screenshots/initial_ui.png)
+
+### Input validation
+Empty or nonsensical queries are rejected with a clear warning — no wasted API calls.
+![Validation warning](Screenshots/validation_warning.png)
+
+### Input validation — gibberish query
+Gibberish queries are not accepted.
+![Validation warning — gibberish](Screenshots/validation_warning_two.png)
+
+### Live progress
+Each stage of the pipeline updates a progress bar in real time.
+![Progress bar](Screenshots/progress_bar.png)
+
+### Generated report
+The synthesised report appears inline alongside a PDF download button located at the end of the markdown text.
+![Generated report](Screenshots/report_generated.png)
 
 ---
 
@@ -70,6 +99,7 @@ flowchart TD
     style F fill:#3b82f6,color:#fff
     style G fill:#10b981,color:#fff
 ```
+
 Parallel search execution via `asyncio.gather` keeps latency low. Pydantic schemas at each agent boundary guarantee the next agent receives well-formed, validated data.
 
 ---
@@ -91,7 +121,11 @@ pip install -r requirements.txt
 
 **3. Set your OpenAI API key**
 
-Create a `.env` file in the project root: OPENAI_API_KEY=sk-...
+Create a `.env` file in the project root:
+
+```
+OPENAI_API_KEY=sk-...
+```
 
 **4. Launch the app**
 
@@ -117,7 +151,7 @@ The UI opens in your browser at `http://localhost:7860`.
 
 - **Why split into agents?** Each agent has focused instructions and a narrow output type, making outputs more reliable than a monolithic prompt. It also mirrors how real research workflows are structured.
 - **Why Pydantic outputs?** Structured outputs remove fragile text parsing between stages. The planner returns `WebSearchPlan`; the writer returns `ReportOutline` — the orchestrator never has to guess.
-- **Why direct function call for PDF?** The `PDF Saver` tool is logically an agent, but functionally just file I/O. Calling the underlying function directly (skipping the LLM) is faster, cheaper, and deterministic.
+- **Why direct function call for PDF?** The `PDF Creator` tool is logically an agent, but functionally just file I/O. Calling the underlying function directly (skipping the LLM) is faster, cheaper, and deterministic.
 
 ---
 
@@ -126,7 +160,7 @@ The UI opens in your browser at `http://localhost:7860`.
 - Save markdown report alongside PDF for easy editing
 - Persistent history of past reports (sidebar)
 - Configurable number of search angles
-- Option to select between frontier models (Claude, Gemma etc.)
+- Option to select between frontier models (Claude, Gemini, etc.)
 - Mid-run cancel button
 
 ---
@@ -136,26 +170,3 @@ The UI opens in your browser at `http://localhost:7860`.
 MIT — feel free to fork, adapt, and build on top of this.
 
 ---
-
-🧠 **Built with OpenAI frontier models and the OpenAI Agents SDK** 🚀
-
-## 🖼️ Screenshots
-
-### Home screen
-![Home screen](Screenshots/initial_ui.png)
-
-### Input validation
-Empty or nonsensical queries are rejected with a clear warning — no wasted API calls.
-![Validation warning](Screenshots/validation_warning.png)
-
-### Input validation - Gibberish Query
-Gibberish queries are not accepted. 
-![Validation warning_two](Screenshots/validation_warning_two.png)
-
-### Live progress
-Each stage of the pipeline updates a progress bar in real time.
-![Progress bar](Screenshots/progress_bar.png)
-
-### Generated report
-The synthesised report appears inline alongside a PDF download button located at the end of the markdown text.
-![Generated report](Screenshots/report_generated.png)
