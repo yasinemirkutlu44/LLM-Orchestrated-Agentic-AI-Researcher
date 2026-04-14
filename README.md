@@ -66,7 +66,7 @@ Parallel search execution via `asyncio.gather` keeps latency low. Pydantic schem
 **1. Clone the repo**
 
 ```bash
-git clone https://github.com/<your-username>/LLM-Orchestrated-Agentic-AI-Researcher.git
+git clone https://github.com/yasinemirkutlu44/LLM-Orchestrated-Agentic-AI-Researcher.git
 cd LLM-Orchestrated-Agentic-AI-Researcher
 ```
 
