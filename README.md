@@ -147,7 +147,7 @@ The UI opens in your browser at `http://localhost:7860`.
 
 - **Why split into agents?** Each agent has focused instructions and a narrow output type, making outputs more reliable than a monolithic prompt. It also mirrors how real research workflows are structured.
 - **Why Pydantic outputs?** Structured outputs remove fragile text parsing between stages. The planner returns `WebSearchPlan`; the writer returns `ReportOutline` — the orchestrator never has to guess.
-- **Why direct function call for PDF?** The `PDF Creator` tool is logically an agent, but functionally just file I/O. Calling the underlying function directly (skipping the LLM) is faster, cheaper, and deterministic.
+- **Why direct function call for PDF?** The `PDF Creator` tool is logically an agent, but functionally just file I/O. Calling the underlying function directly (skipping the LLM) is faster and cheaper.
 
 ---
 
@@ -155,7 +155,7 @@ The UI opens in your browser at `http://localhost:7860`.
 
 - Save markdown report alongside PDF for easy editing
 - Persistent history of past reports (sidebar)
-- Configurable number of search angles
+- Configurable number of different search aspects
 - Option to select between frontier models (Claude, Gemini, etc.)
 - Mid-run cancel button
 
