@@ -35,7 +35,7 @@ The system orchestrates five specialised agents, each with a single responsibili
 All orchestration happens in the **`Orchestrator`** class (`LLM_Orchestrator.py`), which coordinates the agents and streams progress updates to the UI via an async generator.
 
 ---
----
+
 ## 🏗️ How It Works
 
 ```mermaid
