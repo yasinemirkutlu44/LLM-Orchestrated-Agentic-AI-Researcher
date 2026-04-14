@@ -36,21 +36,27 @@ All orchestration happens in the **`Orchestrator`** class (`LLM_Orchestrator.py`
 
 ---
 
-## 🏗️ How It Works
-
 ```mermaid
 flowchart TD
     A[👤 User Query] --> B[🛡️ Query Validator]
     B -->|valid| C[🗺️ Search Planner]
-    B -->|invalid| X[❌ Rejected with reason]
-    C --> D1[🌐 Research Assistant Agent 1]
-    C --> D2[🌐 Research Assistant Agent 2]
-    C --> D3[🌐 Research Assistant Agent N]
-    D1 --> E[✍️ Senior Researcher Agent<br/>synthesises findings]
+    
+    subgraph parallel [Parallel via asyncio.gather]
+        D1[🌐 Research Agent 1]
+        D2[🌐 Research Agent 2]
+        D3[🌐 Research Agent N]
+    end
+    
+    C --> D1
+    C --> D2
+    C --> D3
+    D1 --> E[✍️ Senior Writer<br/>synthesises findings]
     D2 --> E
     D3 --> E
     E --> F[📄 PDF Saver<br/>exports downloadable PDF]
     F --> G[✅ Report delivered to user]
+    
+    B -.->|invalid| X[❌ Rejected with reason]
 
     style A fill:#4a9eff,color:#fff
     style B fill:#ff6b6b,color:#fff
