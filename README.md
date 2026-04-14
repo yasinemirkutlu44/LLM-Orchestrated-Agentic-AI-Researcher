@@ -4,7 +4,7 @@ An autonomous researcher that turns any research query into a structured, downlo
 
 🚀 **Live demo:** [Hugging Face Space](https://huggingface.co/spaces/yasinemirkutlu44/LLM-Orchestrated_Agentic_AI_Researcher)
 
-> **TL;DR:** Type a research question → get a cited, multi-section PDF report in under a minute.
+**Type a research question → get a cited, multi-section PDF report in under a minute.**
 
 ---
 
