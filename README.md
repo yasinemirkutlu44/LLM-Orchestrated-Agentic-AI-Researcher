@@ -135,11 +135,11 @@ The UI opens in your browser at `http://localhost:7860`.
 
 ## 💡 UX Details
 
-- **Input validation** — empty, too-short, or nonsensical queries are rejected before any API calls, with a clear toast message.
-- **Live progress bar** — each stage updates a percentage (20% → 50% → 75% → 95% → 100%) so users see what's happening.
-- **Locked inputs during run** — the Run button and textbox disable mid-run to prevent double-submission.
-- **Restart button** — clears the session and returns to a fresh state.
-- **PDF download** — the generated report is immediately available as a downloadable file.
+- **Input validation** —> empty, too-short, or nonsensical queries are rejected before any API calls, with a clear toast message.
+- **Live progress bar** —> each stage updates a percentage (20% → 50% → 75% → 95% → 100%) so users see what's happening.
+- **Locked inputs during run** —> the Run button and textbox disable mid-run to prevent double-submission.
+- **Restart button** —> clears the session and returns to a fresh state.
+- **PDF download** —> the generated report is immediately available as a downloadable file.
 
 ---
 
