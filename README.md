@@ -129,16 +129,20 @@ MIT — feel free to fork, adapt, and build on top of this.
 ## 🖼️ Screenshots
 
 ### Home screen
-![Home screen](Screenshots/01_initial_ui.png)
+![Home screen](Screenshots/initial_ui.png)
 
 ### Input validation
 Empty or nonsensical queries are rejected with a clear warning — no wasted API calls.
-![Validation warning](Screenshots/02_validation_warning.png)
+![Validation warning](Screenshots/validation_warning.png)
+
+### Input validation - Gibberish Query
+Gibberish queries are not accepted. 
+![Validation warning_two](Screenshots/validation_warning_two.png)
 
 ### Live progress
 Each stage of the pipeline updates a progress bar in real time.
-![Progress bar](screenshots/03_progress_bar.png)
+![Progress bar](screenshots/progress_bar.png)
 
 ### Generated report
 The synthesised report appears inline alongside a PDF download button.
-![Generated report](screenshots/04_report_generated.png)
+![Generated report](screenshots/report_generated.png)
