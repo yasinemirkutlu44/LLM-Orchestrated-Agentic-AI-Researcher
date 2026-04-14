@@ -43,10 +43,10 @@ flowchart TD
     A[👤 User Query] --> B[🛡️ Query Validator]
     B -->|valid| C[🗺️ Search Planner]
     B -->|invalid| X[❌ Rejected with reason]
-    C --> D1[🌐 Research Agent 1]
-    C --> D2[🌐 Research Agent 2]
-    C --> D3[🌐 Research Agent N]
-    D1 --> E[✍️ Senior Writer<br/>synthesises findings]
+    C --> D1[🌐 Research Assistant Agent 1]
+    C --> D2[🌐 Research Assistant Agent 2]
+    C --> D3[🌐 Research Assistant Agent N]
+    D1 --> E[✍️ Senior Researcher Agent<br/>synthesises findings]
     D2 --> E
     D3 --> E
     E --> F[📄 PDF Saver<br/>exports downloadable PDF]
