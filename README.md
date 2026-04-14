@@ -125,3 +125,20 @@ MIT — feel free to fork, adapt, and build on top of this.
 ---
 
 🧠 **Built with OpenAI frontier models and the OpenAI Agents SDK** 🚀
+
+## 🖼️ Screenshots
+
+### Home screen
+![Home screen](Screenshots/01_initial_ui.png)
+
+### Input validation
+Empty or nonsensical queries are rejected with a clear warning — no wasted API calls.
+![Validation warning](Screenshots/02_validation_warning.png)
+
+### Live progress
+Each stage of the pipeline updates a progress bar in real time.
+![Progress bar](screenshots/03_progress_bar.png)
+
+### Generated report
+The synthesised report appears inline alongside a PDF download button.
+![Generated report](screenshots/04_report_generated.png)
