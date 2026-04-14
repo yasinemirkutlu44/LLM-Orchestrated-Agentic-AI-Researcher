@@ -141,8 +141,8 @@ Gibberish queries are not accepted.
 
 ### Live progress
 Each stage of the pipeline updates a progress bar in real time.
-![Progress bar](screenshots/progress_bar.png)
+![Progress bar](Screenshots/progress_bar.png)
 
 ### Generated report
 The synthesised report appears inline alongside a PDF download button.
-![Generated report](screenshots/report_generated.png)
+![Generated report](Screenshots/report_generated.png)
