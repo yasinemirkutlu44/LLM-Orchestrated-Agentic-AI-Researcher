@@ -7,10 +7,6 @@ An autonomous researcher that turns any research query into a structured, downlo
 > **TL;DR:** Type a research question → get a cited, multi-section PDF report in under a minute.
 
 ---
-🧠 **Built with OpenAI frontier models and the OpenAI Agents SDK** 🚀
----
-
----
 
 ## ✨ What It Does
 
@@ -169,4 +165,6 @@ The UI opens in your browser at `http://localhost:7860`.
 
 MIT — feel free to fork, adapt, and build on top of this.
 
+---
+🧠 **Built with OpenAI frontier models and the OpenAI Agents SDK** 🚀
 ---
