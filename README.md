@@ -53,8 +53,8 @@ flowchart TD
     D1 --> E[✍️ Senior Writer<br/>synthesises findings]
     D2 --> E
     D3 --> E
-    E --> F[📄 PDF Saver<br/>exports downloadable PDF]
-    F --> G[✅ Report delivered to user]
+    E --> F[📄 PDF Creator<br/>exports downloadable PDF]
+    F --> G[✅ Report delivered to user in PDF format]
     
     B -.->|invalid| X[❌ Rejected with reason]
 
