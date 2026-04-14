@@ -1,5 +1,3 @@
-# AgenticAI_LLMOrchestration_CVChatbot
-
 # 🔬 LLM-Orchestrated Agentic AI Researcher 📚
 
 An autonomous researcher that turns any research query into a structured, downloadable PDF report — powered by an orchestration of specialised LLM agents, each handling a distinct step of the workflow.
