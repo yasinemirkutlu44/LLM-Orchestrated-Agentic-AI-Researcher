@@ -2,7 +2,7 @@
 
 An autonomous researcher that turns any research query into a structured, downloadable PDF report — powered by an orchestration of specialised LLM agents, each handling a distinct step of the workflow.
 
-🚀 **Live demo:** [Hugging Face Space](https://huggingface.co/spaces/yasinemirkutlu44/LLM-Orchestrated_Agentic_AI_Researcher)
+🚀 **A live demo is available here:** [Hugging Face Space](https://huggingface.co/spaces/yasinemirkutlu44/LLM-Orchestrated_Agentic_AI_Researcher)
 
 **Type a research question → get a cited, multi-section PDF report in under a minute.**
 
